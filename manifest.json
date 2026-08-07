@@ -1,0 +1,11 @@
+{
+    "name": "Nosso 1 Ano",
+    "short_name": "N & E",
+    "description": "Um cantinho especial para celebrar nossa história.",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#3b0b3f",
+    "theme_color": "#8b1e5f",
+    "orientation": "portrait",
+    "icons": []
+  }

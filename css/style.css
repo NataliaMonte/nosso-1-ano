@@ -1,0 +1,262 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    position:relative;
+
+    color:white;
+
+}
+
+/* ===========================
+   FUNDO
+=========================== */
+
+.background{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:-2;
+
+    background:linear-gradient(
+        160deg,
+        #2b0038 0%,
+        #500048 30%,
+        #8b0035 70%,
+        #2b002d 100%
+    );
+
+}
+
+/* brilho */
+
+.background::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at 20% 20%,rgba(255,255,255,.08),transparent 25%),
+    radial-gradient(circle at 80% 30%,rgba(255,255,255,.05),transparent 30%),
+    radial-gradient(circle at 50% 90%,rgba(255,255,255,.05),transparent 30%);
+
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+
+    width:90%;
+
+    max-width:430px;
+
+    text-align:center;
+
+    z-index:2;
+
+}
+
+/* ===========================
+   TÍTULO
+=========================== */
+
+h1{
+
+    font-family:'Cinzel',serif;
+
+    font-size:4.5rem;
+
+    letter-spacing:10px;
+
+    text-shadow:
+    0 0 10px #ff6cb7,
+    0 0 30px #ff6cb7;
+
+    animation:pulsar 2.5s infinite;
+
+}
+
+h2{
+
+    margin-top:10px;
+
+    font-weight:300;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+}
+
+/* ===========================
+   CONTADOR
+=========================== */
+
+.countdown{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-top:45px;
+
+}
+
+.card{
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:20px;
+
+    padding:22px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+
+}
+
+.card span{
+
+    font-size:2.6rem;
+
+    font-weight:bold;
+
+}
+
+.card small{
+
+    display:block;
+
+    margin-top:10px;
+
+    letter-spacing:2px;
+
+    color:#ffd9ef;
+
+}
+
+/* ===========================
+   FRASE
+=========================== */
+
+.texto{
+
+    margin-top:40px;
+
+    line-height:1.8;
+
+    color:#f8ddff;
+
+    font-size:.95rem;
+
+}
+
+/* ===========================
+   RODAPÉ
+=========================== */
+
+.footer{
+
+    position:absolute;
+
+    bottom:20px;
+
+    width:100%;
+
+    text-align:center;
+
+    font-size:.8rem;
+
+    color:#f3cfff;
+
+}
+
+/* ===========================
+   ANIMAÇÕES
+=========================== */
+
+@keyframes pulsar{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+
+@media(max-width:600px){
+
+h1{
+
+    font-size:3.7rem;
+
+}
+
+.countdown{
+
+    gap:15px;
+
+}
+
+.card{
+
+    padding:18px;
+
+}
+
+.card span{
+
+    font-size:2.2rem;
+
+}
+
+}
